@@ -13,13 +13,14 @@ class ChannelList extends Component {
 
   handleClick = (channel) => {
     this.props.selectChannel(channel);
+    this.setState({ clicked: true });
   }
 
   renderChannel = (channel) => {
     return (
       <li
         key={channel}
-        className={channel === this.props.selectedChannel ? 'active' : null}
+        className={channel === this.props.selectedChannel ? 'active' : ""}
         onClick={() => this.handleClick(channel)}
         role="presentation"
       >
@@ -43,7 +44,7 @@ class ChannelList extends Component {
 function mapStateToProps(state) {
   return {
     channels: state.channels,
-    selectedChannel: state.selectedChannel
+    selectedChannel: state.selected_channels
   };
 }
 

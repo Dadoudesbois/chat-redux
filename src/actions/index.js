@@ -17,6 +17,9 @@ export function fetchMessages(channel) {
 
 export function createMessage(channel, author, content) {
   const url = `${BASE_URL}/${channel}/messages`;
+  console.log(channel);
+  console.log(author);
+  console.log(content);
   const body = { author, content }; // ES6 destructuring
   const promise = fetch(url, {
     method: 'POST',
@@ -29,7 +32,7 @@ export function createMessage(channel, author, content) {
 
   return {
     type: MESSAGE_POSTED,
-    payload: promise // Will be resolved by redux-promise
+    payload: promise
   };
 }
 

@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="messaging-wrapper">
       <div className="logo-container">
-        <img className="messaging-logo" src="assets/images/logo.svg" alt="logo" />
+        <img className="messaging-logo" src="assets/images/index.svg" alt="logo" />
       </div>
       <ChannelList />
       <MessageList />

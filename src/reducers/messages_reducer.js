@@ -3,6 +3,9 @@ import { FETCH_MESSAGES, MESSAGE_POSTED, CHANNEL_SELECTED } from '../actions';
 export default function(state = null, action) {
   switch (action.type) {
     case FETCH_MESSAGES: {
+      //      const copy = state.slice(0);
+      //      copy.push(action.payload.messages);
+      //      return copy;
       return action.payload.messages;
     }
     case MESSAGE_POSTED: {

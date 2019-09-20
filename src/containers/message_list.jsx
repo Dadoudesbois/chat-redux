@@ -32,7 +32,7 @@ class MessageList extends Component {
     return (
       <div className="channel-container">
         <div className="channel-title">
-          <span>Channel #{this.props.selectedChannel}</span>
+          <h2>Channel <span className="strongred">#{this.props.selectedChannel}</span></h2>
         </div>
         <div className="channel-content" ref={(list) => { this.list = list; }}>
           {
@@ -50,7 +50,7 @@ class MessageList extends Component {
 function mapStateToProps(state) {
   return {
     messages: state.messages,
-    selectedChannel: state.selectedChannel
+    selectedChannel: state.selected_channels
   };
 }
 

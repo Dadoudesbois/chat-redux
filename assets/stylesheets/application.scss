@@ -86,6 +86,10 @@ body {
   overflow: scroll;
 }
 
+.active {
+   color: #D23333!important;
+ }
+
 .message-container > i {
   font-style: normal;
   font-weight: 600;
@@ -122,18 +126,33 @@ input[type="text"] {
   padding: 10px;
   width: 100%;
   height: 100%;
-  border-radius: 2px;
+  border-radius: 20px;
   border-color: #d4d4d4;
+  &:focus{
+    box-shadow: 0 0px 3px #D23333 !important;
+    border:none;
+  }
 }
 
 button {
   padding: 10px 17px;
-  margin-left: -2px;
-  border-radius: 0 2px 2px 0;
+  margin-left: -60px;
+  // border-radius: 0 2px 2px 0;
+  border-radius: 20px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.07);
   border: none;
   background-color: #D23333;
   color: white;
   font-size: 14px;
   font-weight: 600;
+  &:hover{
+    background-color: #D23333;
+    color: white;
+    box-shadow: 0 1px 2px #D23333;
+  }
+}
+
+.strongred {
+  color: #D23333 !important;
+  font-weight: bolder;
 }
